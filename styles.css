@@ -61,6 +61,12 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.2; letter-spacing: -0.02em; }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { text-decoration: none; font-size: 14px; color: var(--text-2); transition: color .15s; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
+.nav-links a.nav-lab {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; margin: -5px 0;
+}
+.nav-links a.nav-lab:hover { border-color: var(--accent); color: var(--accent); }
+.nav-lab svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.6; }
 .nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
 .nav-toggle span { display: block; width: 20px; height: 1.5px; background: var(--text); margin: 5px 0; transition: transform .2s; }
 
@@ -281,6 +287,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.2; letter-spacing: -0.02em; }
     display: none;
   }
   .nav-links a { padding: 10px 0; font-size: 16px; }
+  .nav-links a.nav-lab { margin: 8px 0 4px; padding: 8px 14px; align-self: flex-start; }
   .nav.open .nav-links { display: flex; }
   .nav.open .nav-toggle span:first-child { transform: translateY(3.25px) rotate(45deg); }
   .nav.open .nav-toggle span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
